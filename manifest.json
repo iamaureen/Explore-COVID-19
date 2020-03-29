@@ -14,5 +14,14 @@
   ],
   "background":{
     "scripts":["background.js"]
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+         "<all_urls>"
+      ],
+      "run_at": "document_idle",
+      "js": ["jquery-2.1.3.min.js", "content.js"]
+    }
+  ]
 }
